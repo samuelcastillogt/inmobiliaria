@@ -1,12 +1,5 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBTlIW_1NAeMeSDOdCc4AICtGxoYbaUyuw",
-    authDomain: "directorio-bc73c.firebaseapp.com",
-    databaseURL: "https://directorio-bc73c.firebaseio.com",
-    projectId: "directorio-bc73c",
-    storageBucket: "directorio-bc73c.appspot.com",
-    messagingSenderId: "584037980083",
-    appId: "1:584037980083:web:136190acf46a5337565dc6",
-    measurementId: "G-0MXJNYN7QQ"
+
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
