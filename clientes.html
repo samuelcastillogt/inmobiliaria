@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/bbfd0abfad.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .clientes{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tarjeta{
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            border-radius: 6px;
+            margin: 10px;
+            box-shadow: 2px 5px 3px black;
+            padding: 20px;
+        }
+        .tarjeta p{
+            color: black;
+            font-size: medium;
+        }
+        .danger{
+            background-color: red;
+            border: none;
+            padding: 10px;
+
+        }
+        @media only screen and (max-width: 700px) {
+            .tarjeta{
+                width: 80%;
+                font-size: 1.2em;
+        }
+        }
+    </style>
+   
+    <title>Clientes</title>
+</head>
+<body>
+    <header>
+        <section class="menu">
+                <div class="menu_control">
+                    <i class="fas fa-house-user"></i><br>
+                    <p>Inmobiliaria</p> 
+                </div>
+             
+        </section>
+        <div id="menu_list" class="menu_list">
+            <ul>
+                <li>home</li>
+                <li>conts</li>
+            </ul>
+        </div>
+    </header>
+<section id="clientes" class="clientes">
+
+</section>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyBTlIW_1NAeMeSDOdCc4AICtGxoYbaUyuw",
+    authDomain: "directorio-bc73c.firebaseapp.com",
+    databaseURL: "https://directorio-bc73c.firebaseio.com",
+    projectId: "directorio-bc73c",
+    storageBucket: "directorio-bc73c.appspot.com",
+    messagingSenderId: "584037980083",
+    appId: "1:584037980083:web:136190acf46a5337565dc6",
+    measurementId: "G-0MXJNYN7QQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+const clientes = db.collection("clientes").doc()
+db.collection("clientes")
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            const datos = doc.data()
+            document.getElementById("clientes").innerHTML+= `
+            <div class="tarjeta">
+                <p>${datos.nombre} ${datos.apellido}</p>
+                <p>Interado en: ${datos.interesado}</p>
+                <p>Correo electronico:${datos.correo} </p>
+                <button class="danger">Eliminar</button>
+                </div>
+                
+            `
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+</script>
+</body>
+</html>

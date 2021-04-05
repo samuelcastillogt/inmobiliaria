@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    padding: 5px;
+}
+body{
+   background-image: linear-gradient(to right, #2c3e50, #34495e);
+}
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_control{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu_list{
+    position: fixed;
+    display: none;
+}
+.menu_list{
+    background-color: red;
+}
+.menu_list li{
+    list-style: none;
+    margin: 30px;
+    position: fixed;
+    top: 20%;
+    bottom: 20%;
+}
+.hola{
+    position: fixed;
+    left: -300%;
+}
+.hidden{
+    display: block;
+    height: 100vh;
+}
+.menu_control:hover{
+    cursor: pointer;
+}
+.hero{
+    display: flex;
+    height: auto;
+    padding: 30px;
+    background-color: rgba(52, 152, 219,.3);
+   
+}
+.h2{
+    font-size: 1.8em;
+    padding: 10px;
+}
+.formulario{
+    /* background-color: #2980b9; */
+    background-image: url("/img/bg-shape-1.svg");
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+.campo{
+    padding: 5px;
+}
+.campo_input1{
+    border-radius: 5px;
+    height: 25px;
+    width: 30%;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 5px;
+    outline: none;
+    background-color: rgba(44, 62, 80,.5);
+}
+.campo_input2{
+    width: 90%;
+    padding: 10px;
+ 
+}
+.opcion{
+    padding: 10px;
+}
+::-webkit-input-placeholder { 
+    color: white;
+    /* padding: 20px;
+    font-weight: bold; */
+} 
+.btn-primary{
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #34495e;
+    color: antiquewhite;
+    cursor: pointer;
+    font-size: 2em;
+}
+.carrusel{
+    width: 50%;
+    background-image: url("https://mapainmueble.com/wp-content/uploads/2021/03/WhatsApp-Image-2020-09-09-at-12.00.04-AM-525x328.jpg");
+    background-size: cover;
+}
+.carrusel img{
+    object-fit: cover;
+}
+.disponibles{
+    padding: 30px;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.disponibles:hover{
+  
+}
+.propiedad{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    margin: 20px;
+    transition: 1s;
+}
+.propiedad:hover{
+    transform: scale(1.2);
+    
+}
+.propiedad_texto{
+    background-color: rgba(44, 62, 80,.5);
+    
+    position: absolute;
+    bottom: 25px;
+    padding: 5px;
+}
+.propiedad_texto_titulo{
+    font-weight: bold;
+    opacity: 1;
+}
+.propiedad_img{ 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+       
+        /* object-position: center center; */
+      
+}
+.presentacion{
+    background-color: #2980b9;
+    color: black;
+}
+.text-presentacion{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.presentacion_p, .presentacion_h1{
+    width: 50%;
+}
+.presntacion_icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icon{
+    width: 40%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.icon i{
+    font-size: 2em;
+}
+.menu_j{
+
+  
+    font-size: 4em;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 0;
+    margin: 0;
+
+
+}
+.menu_j i{
+    color: green;
+
+  
+}
+
+
+footer{
+    padding: 30px;
+    border-top: 2px solid black;
+}
+@media only screen and (max-width: 700px) {
+    .carrusel{
+       display: none;
+    }
+    .formulario{
+        /* background-color: #2980b9; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+    }
+    .campo_input1{
+       margin: 10px;
+        width: 90%;
+        
+    }
+    .campo_input2{
+        width: 90%;
+     
+    }
+    .text-presentacion{
+        display: block;     
+    }
+    .presentacion_p, .presentacion_h1{
+        width: 90%;
+    }
+  }
