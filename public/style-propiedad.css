@@ -1,0 +1,102 @@
+
+.cabecera{
+    position: relative;
+}
+.back-cabecera{
+    width: 100%;
+    height: 30vh;
+    opacity: 0.4;
+    object-position: center;
+    object-fit: cover;
+}
+.text-cabecera{
+    font-size: 2em;
+    position: absolute;
+    bottom: 30px;
+}
+#mapid { 
+    color: black;
+    height: 150px; 
+}
+.galeria{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    white-space: nowrap;
+    align-items: center;
+    align-items: center;
+    /* overflow-y: hidden;
+    overflow: scroll; */
+    height: 350px;
+    margin: 20px;
+
+}
+/* ::-webkit-scrollbar {display: none;} */
+.galeria-carrusel{
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 30px;
+    height: 300px;
+}
+.resto{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    transition: 2s;
+}
+.resto:active {
+    width: 400px;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+}
+.texto{
+    width: 40%;
+}
+.contacto{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.info-contacto{
+    color: black;
+}
+.img-tarjeta{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;    
+}
+.texto2{
+    color: black;
+    font-size: 1.8em;
+}
+
+@media only screen and (max-width: 700px) {
+    .texto{
+        width: 80%;
+    }
+    .img-tarjeta{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;    
+    }
+    .texto2{
+        color: black;
+        font-size: 1.8em;
+    }
+    .resto{
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        transition: 2s;
+    }
+    .resto:hover{
+        width: 100%;
+    }
+}

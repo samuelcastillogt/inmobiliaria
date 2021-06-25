@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/bbfd0abfad.js'></script>
+    <link rel="stylesheet" href="style.css">
+   
+    <title>Inmobiliaria XXX</title>
+</head>
+<body>
+    <header>
+        <section class="menu">
+            
+                <div class="menu_control">
+                    
+                    <p><i class="fas fa-house-user"></i>
+                    Inmobiliaria</p> 
+                </div>
+             
+        </section>
+        <div id="menu_list" class="menu_list">
+            <ul>
+                <li>home</li>
+                <li>conts</li>
+            </ul>
+        </div>
+    </header>
+  <section class="hero">
+    <div class="formulario">
+        <p class="h2">Compra la propiedad de tus sueños</p>
+        <div class="hero_form" id="hero_form">
+            <form action="">
+                <div class="campo">
+                    <input type="text" id="nombre" class="campo_input1" placeholder="Nombre">
+                    <input type="text" id="apellido" class="campo_input1" placeholder="Apellido">
+                </div>
+                <div class="campo">
+                    <label for="">Busca una propiedad en:</label>
+                    <select name="transporte" class="campo_input1" id="lugar">
+
+                        <option class="opcion">San Juan Sacatepequez</option>
+                        
+                        <option class="opcion">Ciudad Quetzal</option>
+                        
+                        <option class="opcion">San Raymundo</option>
+                        
+                        </select>
+                </div>
+                <div class="campo">
+                    <input type="email" class="campo_input1 campo_input2"  id="correo" placeholder="Correo electronico">
+                </div>
+                
+            </form>
+            <button class="btn-primary" id="boton">Suscribirse</button>
+        </div>
+     
+    </div>
+    <div class="carrusel">
+        
+    </div>
+  </section>
+  <section class="disponibles">
+    <% propiedades.map(item =>{ %>
+        <a href="/propiedad/<%= item.propiedad.id %>" class="propiedad">
+            <img src="<%= item.propiedad.imagen %>" alt=""class="propiedad_img">
+            <div class="propiedad_texto">
+                <p class="propiedad_texto_titulo"><%= item.propiedad.nombre %></p>
+                <p>Precio: <%= item.propiedad.precio %></p>
+            </div>
+        </a>
+   <% }) %>
+     
+  </section>
+  <section class="presentacion">
+    <div class="presentacion">
+        <div class="text-presentacion">
+            <div>
+                <h1 class="h2" class="presentacion_h1">Casas terrenos y propiedades en Ciudad Quetzal</h1>
+            </div>
+            
+            <div class="presentacion_p">
+                <p>Necesita una <b>Casa</b>? o un <b>Terreno</b>? Ya sea que busque una propiedad en <b>venta</b> o para <b>alquilar</b>, 
+                    tenemos una amplia variedad de casas y terrenos disponibles para que usted los venga a ver.
+                </p>
+                <p>
+                    <b>Ciudad Quetzal</b> es una zona en crecimiento, cada semana mas familias compran 
+                    una <b>casa</b> en la zona. Nosotros nos encargamos que la <b>casa</b> de sus sueños
+                    este disponible para usted.
+                </p>
+                <p>Pero si lo que quiere es un <b>Terreno</b>, no imorta si quiere algo centrico o mas relajado,
+                    tenemos todo tipo de <b>terrenos</b> que se adaptan a sus gustos pero mas importante a su presupuesto.
+                </p>
+            </div>
+           
+        </div>
+    </div>
+    
+  </section>  
+  <section class="presntacion_icons">
+      <div class="icon">
+        <i class="fas fa-user-shield"></i>
+        <p class="propiedad_texto_titulo">Equipo 100% profesional</p>
+      </div>
+      <div class="icon">
+        <i class="fas fa-search-location"></i>
+        <p class="propiedad_texto_titulo">Buscamos la propiedad de sus sueños</p>
+      </div>
+      <div class="icon">
+        <i class="fas fa-map-signs"></i>
+        <p class="propiedad_texto_titulo">Lo acompañamos durante el proceso de compra</p>
+      </div>
+  </section>
+  <section class="propiedades2">
+      
+        <% 
+            propiedades.map(item =>{ %>
+                <%if (item.propiedad.destacada === true) { %>
+                    <div class="propiedad2">
+                <div class="propiedad2-img">
+                    <img class="propiedad2-img" src="<%= item.propiedad.imagen %>" alt="">
+                </div>
+                <div class="propiedad2-text">
+                    <p class="text2"><%= item.propiedad.nombre %></p>
+                    <p class="precio"><%= item.propiedad.precio %></p>
+                </div>
+                <div class="descripcion">
+                    <p><%= item.propiedad.descripcion %></p>
+                    <a href="/propiedad/<%= item.propiedad.id %>" class="btn">Mas informacion</a>
+                </div>
+                <div class="img-perfil">
+                  <img class="perfil-img"src="https://thumbs.dreamstime.com/b/hombre-guapo-con-cara-y-bigote-sin-afeitar-tienda-de-peluquer%C3%ADa-el-cuidado-la-piel-concepto-belleza-masculina-casual-pero-hombres-169110740.jpg" alt="">
+              </div>
+            </div>
+            
+            <% } %>   
+       <% }) %>
+          
+     
+  </section>
+
+    <footer>
+        <p>Una pagina de Samuel Castillo</p>>
+    </div>
+</body>
+</html>

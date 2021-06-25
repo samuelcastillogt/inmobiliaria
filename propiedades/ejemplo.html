@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/bbfd0abfad.js'></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Propiedad de Ejemplo</title>
+</head>
+<body>
+    <header>
+        <section class="menu">
+            
+                <div class="menu_control">
+                    
+                    <p><i class="fas fa-house-user"></i>
+                    Inmobiliaria</p> 
+                </div>
+             
+        </section>
+        <div id="menu_list" class="menu_list">
+            <ul>
+                <li>home</li>
+                <li>conts</li>
+            </ul>
+        </div>
+    </header>
+      <script src='https://apis.google.com/js/platform.js'></script>
+<div class='g-ytsubscribe' data-channel='UCPGp7WB0l2cC41_NQQdQeHA'></div>
+    <div class="cabecera">
+        <img class="back-cabecera" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEFTb1a6sIvMDrH6u88cIXxjly4w4Y_J0eoHwTQgueFah4k1mA3iBdfkTksfiCh5-HXI&usqp=CAU" alt="">
+        <p class="text-cabecera">Casa de ejemplo</p>
+    </div>
+    <section class="descripcion">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit voluptates fugit fuga laudantium. Optio magni exercitationem ex. Consequatur porro, alias reiciendis culpa nihil eos laborum eum ea quae blanditiis? Ea.</p>
+    </section>
+    <div id="mapid"></div>
+    <section class="galeria">
+        <img class="img-principal"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAEFTb1a6sIvMDrH6u88cIXxjly4w4Y_J0eoHwTQgueFah4k1mA3iBdfkTksfiCh5-HXI&usqp=CAU" alt="">
+        <div class="resto">
+            <img class="resto1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOyGy9aNrJ1yr_tL4Nv9ANEV-wym34SqFTJ3HbBBoQhfxJXYKVBS3tlurNOEF6QM_Cbw&usqp=CAU" alt="">
+            <img class="resto1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOyGy9aNrJ1yr_tL4Nv9ANEV-wym34SqFTJ3HbBBoQhfxJXYKVBS3tlurNOEF6QM_Cbw&usqp=CAU" alt="">
+            <img class="resto1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOyGy9aNrJ1yr_tL4Nv9ANEV-wym34SqFTJ3HbBBoQhfxJXYKVBS3tlurNOEF6QM_Cbw&usqp=CAU" alt="">
+        </div>
+        <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium dolores atque sit fugit veniam aliquid a quas. Eius, quis neque libero error dolorum dolore odit magnam fuga cumque, autem aut.</p>
+    </section>
+    <section class="contacto">
+        <div class="tarjeta-imagen">
+            <img class="img-tarjeta"src="https://thumbs.dreamstime.com/b/hombre-guapo-con-cara-y-bigote-sin-afeitar-tienda-de-peluquer%C3%ADa-el-cuidado-la-piel-concepto-belleza-masculina-casual-pero-hombres-169110740.jpg" alt="">
+        </div>
+        <div class="info-contacto">
+            <p class="texto2">Nombre del vendedor</p>
+            <p class="texto2">Telefono</p>
+            <p class="texto2">Email</p>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script>
+      var mymap = L.map('mapid').setView([14.67078475918909, -90.55725574493408], 16);
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=sk.eyJ1Ijoic2FtdWVsY2FzdGlsbG9ndCIsImEiOiJja2tvbDkxaHAwMHhkMm9tYTA1bWJvdHcxIn0.b7-x19SDtVcorEa07M4ZqQ', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 25,
+      id: 'mapbox/satellite-v9',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'sk.eyJ1Ijoic2FtdWVsY2FzdGlsbG9ndCIsImEiOiJja2tvbDkxaHAwMHhkMm9tYTA1bWJvdHcxIn0.b7-x19SDtVcorEa07M4ZqQ'
+  }).addTo(mymap);
+  var marker = L.marker([14.67078475918909, -90.55725574493408]).addTo(mymap);
+  marker.bindPopup(`Tu futura casa`).openPopup();
+var popup = L.popup();
+
+
+    </script>
+     <footer>
+        <p>Una pagina de Samuel Castillo</p>
+    </footer>
+</body>
+</html>

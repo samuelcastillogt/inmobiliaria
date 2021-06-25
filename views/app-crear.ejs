@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/bbfd0abfad.js'></script>
+    <link rel="stylesheet" href="../style.css">
+   
+    <title>Agregar propiedad</title>
+</head>
+<body>
+    <header>
+        <section class="menu">
+            
+                <div class="menu_control">
+                    
+                    <p><i class="fas fa-house-user"></i>
+                    Inmobiliaria</p> 
+                </div>
+             
+        </section>
+        <div id="menu_list" class="menu_list">
+            <ul>
+                <li>home</li>
+                <li>conts</li>
+            </ul>
+        </div>
+    </header>
+  <form action="/agregar" method="POST">
+      <div class="form-item">
+          <label for="">Nombre</label>
+          <input type="text" name="nombre">
+      </div>
+      <div class="form-item">
+        <label for="">Descripcion</label>
+        <input type="text" name="descripcion">
+    </div>
+    <div class="form-item">
+        <label for="">Destacada</label>
+        <select name="destacada" id="">
+            <option value="true">No es Destacada</option>
+            <option value="false">Destacada</option>
+        </select>
+    </div>
+    <div class="form-item">
+        <label for="">precio</label>
+        <input type="text" name="precio">
+    </div>
+    <div class="form-item">
+        <label for="">imagen</label>
+        <input type="file" accept="image/*" id="imagen" multiple>
+    </div>
+    <div class="form-item">
+        <label for="">imagen</label>
+        <input type="hidden" name="imagen" id="img">
+    </div>
+    <div class="form-item">
+        <label for="">id</label>
+        <input type="text" name="id">
+    </div>
+    <input type="submit" value="enviar">
+  </form>
+  <style>
+      form{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .form-item{
+          padding: 20px;
+          font-size: 1.5em;
+          color: black;
+      }
+
+      input{
+          color: black;
+          border-radius: 10px;
+          padding: 10px;
+      }
+      select option{
+        color: black;
+          border-radius: 10px;
+          padding: 10px;
+      }
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+  <script src="crear.js"></script>
+</body>
+</html>
